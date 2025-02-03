@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day WebPage</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gorditas:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="titles" id="big-title">Valentine's Day Website</h1>
+    </header>
+
+    <main>
+        <h2 class="sub-titles">Reasons Why I Love You (Hover mouse to reveal)</h2>
+
+        <div class="carousel">
+            <div class="carousel-list">
+                <div class="carousel-item"><span class="heart-text">You make me smile</span></div>
+                <div class="carousel-item"><span class="heart-text">You make me laught</span></div>
+                <div class="carousel-item"><span class="heart-text">You’re smart</span></div>
+                <div class="carousel-item"><span class="heart-text">You’re kind </span></div>
+                <div class="carousel-item"><span class="heart-text">You complete me</span></div>
+                <div class="carousel-item"><span class="heart-text">You make me </br>feel like the </br>luckiest man </br>in the world</span></div>
+                <div class="carousel-item"><span class="heart-text">You tell me every single </br>details about your day.</span></div>
+            </div>
+        </div>
+
+        <!-- Centered Card -->
+        <div class="card-wrapper">
+            <div class="card-container" onclick="flipCard(this)">
+                <div class="card">
+                    <div class="card-front">
+                        <p> Happy Valentine's Day!</p>
+                        <small>(Click me)</small>
+                    </div>
+                    <div class="card-back">
+                        <h2>Un message pour toi ❤️</h2>
+                        <p>Mon amour, chaque jour à tes côtés est une bénédiction. Cette petite carte est là pour te
+                            rappeler à quel point tu es incroyable et combien je t’aime profondément. ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cute Other Section: Our Sweetest Memories -->
+        <section class="memories-section">
+            <h2 class="sub-titles">Our Sweetest Memories</h2>
+            <div class="memories-container">
+                <div class="memory-card">
+                    <img src="../imgs/first_date_night.JPEG" alt="Date Night">
+                    <p>Our first date night 💖</p>
+                </div>
+                <div class="memory-card">
+                    <video width="150" autoplay loop muted>
+                        <source src="../imgs/bowling_night.MP4" type="video/mp4">
+                    </video>
+                    <p>Our bowling date and that amazing shot you hit!🎳</p>
+                </div>
+                <div class="memory-card">
+                    <iframe width="150" height="275" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=-73.568859,45.503878,-73.567859,45.504878&layer=mapnik&marker=45.503878,-73.568859">
+                </iframe>
+                    <p>Our first kiss was here 💋</p>
+                </div>
+                <div class="memory-card">
+                    <video width="150" autoplay loop muted>
+                        <source src="../imgs/oasis_date.MP4" type="video/mp4">
+                    </video>
+                    <p>Most immmersive night of my life!🦊</p>
+                </div>
+                <div class="memory-card">
+                    <video width="150" autoplay loop muted>
+                        <source src="../imgs/arcade_date.MP4" type="video/mp4">
+                    </video>
+                    <p>Showing off our dance skills! 👯‍♂️</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2 class="sub-titles">Couple Gallery 🖼️</h2>
+            <p class="gallery-container">
+                <img class="gallery-img" src="../imgs/fav_pic_1.JPEG">
+                <img class="gallery-img" src="../imgs/fav_pic_2.JPEG">
+                <img class="gallery-img" src="../imgs/fav_pic_3.PNG">
+                <img class="gallery-img" src="../imgs/fav_pic_4.PNG">
+                <img class="gallery-img" src="../imgs/fav_pic_9.jpg">
+                <img class="gallery-img" src="../imgs/fav_pic_5.JPEG">
+                <img class="gallery-img" src="../imgs/fav_pic_6.JPEG">
+                <img class="gallery-img" src="../imgs/fav_pic_7.JPEG">
+                <img class="gallery-img" src="../imgs/fav_pic_8.JPEG">
+            </p>
+        </section>
+
+        <section class="question">
+            <canvas id="confetti"></canvas>
+            <h2 class="sub-titles">Will You Be My Valentine? 🌹</h2>
+            <div class="question-container">
+                <button class="question-btn question-btn-yes">Yes</button>
+                <button class="question-btn question-btn-no" onclick="handleNoClick()">No</button>
+            </div>
+            <div class="gif_container">
+                <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGxxNjRzbmt4bmw2eTQzbDdsbXoycDQxYWYzd2o5MTJ2anBpenowcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hGXLUcKwaBsIA0x42y/giphy.gif" alt="Cute GIF">
+            </div>
+            
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Valentine's Day</p>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

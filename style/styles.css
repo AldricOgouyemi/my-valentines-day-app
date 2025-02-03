@@ -1,0 +1,313 @@
+/* Global Styles */
+body {
+  cursor: url("../imgs/arrow.png"), auto;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gorditas', sans-serif;
+  text-align: center;
+  background: rgb(241, 111, 161);
+  /* background: linear-gradient(287deg, rgba(237,80,141,1) 0%, rgba(217,39,108,1) 100%);  color: white; */
+  overflow-x: hidden;
+}
+
+.titles {
+  font-size: 4em;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.sub-titles {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* Carousel Styles */
+/* Carousel Styles */
+.carousel {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 24px 0; /* Increased padding by 20% (20px * 1.2) */
+  scroll-behavior: smooth;
+}
+
+.carousel-list {
+  display: flex;
+  gap: 24px; /* Increased gap by 20% (20px * 1.2) */
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  position: relative;
+  width: 192px; /* Increased by 20% (160px * 1.2) */
+  height: 172.8px; /* Increased by 20% (144px * 1.2) */
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-item:hover {
+  transform: scale(1.3); /* Enlarges heart */
+}
+
+/* Heart Shape */
+.carousel-item::before, .carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 99.84px; /* Increased by 20% (83.2px * 1.2) */
+  height: 153.6px; /* Increased by 20% (128px * 1.2) */
+  background: red;
+  border-radius: 96px 96px 0 0; /* Increased by 20% (80px * 1.2) */
+  z-index: 1;
+}
+
+.carousel-item::before {
+  left: 96px; /* Increased by 20% (80px * 1.2) */
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.carousel-item::after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Heart Text */
+.heart-text {
+  position: relative;
+  bottom: 36px; /* Increased by 20% (30px * 1.2) */
+  display: none;
+  color: white;
+  font-size: 1em; /* Increased by 20% */
+  font-weight: 700;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none; /* Prevents interaction */
+}
+
+.carousel-item:hover .heart-text {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 144px; /* Increased by 20% (120px * 1.2) */
+    height: 129.6px; /* Increased by 20% (108px * 1.2) */
+  }
+
+  .heart-text {
+    font-size: 0.96em; /* Increased by 20% (0.8em * 1.2) */
+  }
+}
+/* Card styling */
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+
+.card-container {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease-in-out;
+}
+
+.card-container.flipped .card {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+  background-color: #ff8a80;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  font-size: 1.5rem;
+  color: white;
+}
+
+.card-back {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Memories Section */
+.memories-section {
+  margin: 50px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.memories-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.memory-card {
+  width: 200px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.memory-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.memory-card p {
+  font-size: 1rem;
+  color: #ff4081;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Gallery  */
+.gallery-container {
+  height: 200px;
+  width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+
+/* Style for all images */
+.gallery-img {
+  height: 100px;
+  position: absolute;
+  left: 0;
+  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
+  box-shadow: 1px 1px 3px #0008;
+  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84), box-shadow .3s, z-index .3s;
+  z-index: 0;
+}
+
+/* Hover Effect */
+.gallery-img:hover {
+  transform: scale(3);
+  offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
+  box-shadow: 3px 4px 10px #0006;
+  z-index: 999;
+}
+
+/* Question */
+
+.question {
+  margin: 25px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.question-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gif_container{
+  padding: 20px;
+}
+
+.gif_container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+.question-btn{
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, opacity 0.2s;
+}
+
+.question-btn:hover {
+  opacity: 0.8;
+}
+
+.question-btn-no{
+  background-color :red;
+}
+
+.question-btn-yes{
+  background-color :green;
+}
+
+canvas#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
